@@ -1,0 +1,33 @@
+img{
+    max-width: 100%;
+    border-radius: $border-radius-sm;
+}
+.img-raised{
+    box-shadow: $box-shadow-raised;
+}
+
+.image-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-navbar {
+  height: 200px;
+  margin-left: 3em;
+}
+
+.text-container {
+  flex-grow: 1;
+}
+
+
+.tapad-carousel {
+  width: 150px;
+  height: 100px;
+}
+
+.img-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
