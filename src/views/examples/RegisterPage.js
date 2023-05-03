@@ -18,6 +18,8 @@ import {
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footer/Footer.js";
 
+let ps = null;
+
 export default function RegisterPage() {
   React.useEffect(() => {
     document.body.classList.toggle("register-page");

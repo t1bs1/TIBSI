@@ -9,10 +9,51 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  DropdownToggle,
+  dropdownOpen,
 } from "reactstrap";
 
 export default function Footer() {
+    const [color, setColor] = React.useState("navbar-transparent");
+    const [dropdownOpen, setDropdownOpen] = React.useState(false);
+    const [collapseOpen, setCollapseOpen] = React.useState(false);
+  
+    React.useEffect(() => {
+      window.addEventListener("scroll", changeColor);
+      return function cleanup() {
+        window.removeEventListener("scroll", changeColor);
+      };
+    }, []);
+  
+    const changeColor = () => {
+      if (
+        document.documentElement.scrollTop > 99 ||
+        document.body.scrollTop > 99
+      ) {
+        setColor("bg-info");
+      } else if (
+        document.documentElement.scrollTop < 100 ||
+        document.body.scrollTop < 100
+      ) {
+        setColor("navbar-transparent");
+      }
+    };
+  
+    const toggleDropdown = () => {
+      setDropdownOpen(!dropdownOpen);
+    };
+  
+    const toggleCollapse = () => {
+      setCollapseOpen(!collapseOpen);
+    };
+    
+    const closeCollapse = () => {
+      setCollapseOpen(false);
+    };
   return (
     <footer className="footer">
       <Container>
@@ -32,17 +73,26 @@ export default function Footer() {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/landing-page" tag={Link}>
+                <NavLink to="/profile-page" tag={Link}>
                   About
                 </NavLink>
               </NavItem>
+              <Dropdown nav isOpen={dropdownOpen} toggle={toggleDropdown}>
+              <DropdownToggle nav caret>
+                Services
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem tag={Link} to="/landing-page">
+                  IT Services
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/accounting-page">
+                <span style={{ marginLeft: "8px" }}>
+                  Accounting Services</span>
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
               <NavItem>
                 <NavLink to="/register-page" tag={Link}>
-                  Services
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/profile-page" tag={Link}>
                   Contact
                 </NavLink>
               </NavItem>

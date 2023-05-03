@@ -3,22 +3,22 @@ import Swiper from "swiper";
 
 const teamMembers = [
   {
-    name: "John Doe",
-    position: "Project Manager",
+    name: "Gilfed Petancio",
+    position: "Technical Support/IT Man",
     details:
-      "John is an experienced project manager with over 10 years of experience. He has managed numerous successful projects across various industries.",
+      "Gilfred is an experienced IT Man with over 10 years of experience. He has managed numerous successful projects across various industries.",
   },
   {
-    name1: "Jane Smith",
-    position1: "Developer",
+    name1: "Ralph Gacayan",
+    position1: "Software Engineer",
     details1:
-      "Jane is a skilled developer with expertise in React and Node.js. She has worked on several web applications and is passionate about building great software.",
+      "Ralph is a skilled software engineer with expertise in React and Node.js. He has worked on several web applications and is passionate about building great software.",
   },
   {
-    name2: "Bob Johnson",
-    position2: "Designer",
+    name2: "Dale Enrico Calvo",
+    position2: "OJT - Software Engineer",
     details2:
-      "Bob is a talented designer with a keen eye for detail. He has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
+      "Dale is a talented OJT with a keen eye for detail. He has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
   },
 
   {
@@ -82,7 +82,7 @@ const Signup = () => {
               <div className="card-image-container">
                 <img
                   className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/mike.jpg")}
+                  src={require("assets/img/gilfred.jpg")}
                   alt={member.name}
                 />
               </div>
@@ -112,7 +112,7 @@ const Signup = () => {
               <div className="card-image-container">
                 <img
                   className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/lora.jpg")}
+                  src={require("assets/img/james.jpg")}
                   alt={member.name2}
                 />
               </div>
@@ -142,7 +142,7 @@ const Signup = () => {
               <div className="card-image-container">
                 <img
                   className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/james.jpg")}
+                  src={require("assets/img/liam.jpg")}
                   alt={member.name4}
                 />
               </div>
@@ -157,7 +157,7 @@ const Signup = () => {
               <div className="card-image-container">
                 <img
                   className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/lora.jpg")}
+                  src={require("assets/img/paul.jpg")}
                   alt={member.name5}
                 />
               </div>
