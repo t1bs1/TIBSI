@@ -12,7 +12,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Collapse
+  Collapse,
+  Button,
 } from "reactstrap";
 
 export default function IndexNavbar() {
@@ -48,35 +49,45 @@ export default function IndexNavbar() {
   const toggleCollapse = () => {
     setCollapseOpen(!collapseOpen);
   };
-
+  
+  const closeCollapse = () => {
+    setCollapseOpen(false);
+  };
+  
   return (
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
       <Container>
         <div className="navbar-translate">
-        <NavbarBrand to="/" tag={Link} id="navbar-brand" className="navbar-brand-text">
+          <NavbarBrand to="/" tag={Link} id="navbar-brand-sm" className="navbar-brand-text d-none d-lg-block">
             <span>TIBSI • </span>
             The Investream Business Solutions Inc.
+          </NavbarBrand>
+          <NavbarBrand to="/" tag={Link} id="navbar-brand" className="navbar-brand-text d-lg-none">
+            <span>TIBSI • </span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
             Designed and Coded by ASTRO-IT OJT-Software Engineer
           </UncontrolledTooltip>
           <button
-  aria-expanded={collapseOpen}
-  className="navbar-toggler"
-  onClick={toggleCollapse}
->
-  <span className="navbar-toggler-bar bar1" />
-  <span className="navbar-toggler-bar bar2" />
-  <span className="navbar-toggler-bar bar3" />
-  {collapseOpen ? (
-    <span className="navbar-toggler-close">
-      <i className="fa fa-times" />
-    </span>
-  ) : null}
-</button>
-
+            aria-expanded={collapseOpen}
+            className="navbar-toggler"
+            onClick={toggleCollapse}
+          >
+            <span className="navbar-toggler-bar bar1" />
+            <span className="navbar-toggler-bar bar2" />
+            <span className="navbar-toggler-bar bar3" />
+          </button>
         </div>
-        <Collapse navbar isOpen={collapseOpen}>
+        <Collapse navbar isOpen={collapseOpen} onExited={closeCollapse}>
+        {collapseOpen && (
+            <Button
+              className="close ml-auto text-white"
+              aria-label="Close"
+              onClick={closeCollapse}
+            >
+              <span aria-hidden={true}>&times;</span>
+            </Button>
+          )}
           <Nav navbar className="ml-auto">
             <NavItem>
               <NavLink tag={Link} to="/components">
@@ -85,7 +96,7 @@ export default function IndexNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/register-page">
+              <NavLink tag={Link} to="/profile-page">
                 <i className="fa fa-info-circle" />
                 About
               </NavLink>
@@ -96,18 +107,18 @@ export default function IndexNavbar() {
                 Services
               </DropdownToggle>
               <DropdownMenu>
-                <DropdownItem tag={Link} to="/it-services">
+                <DropdownItem tag={Link} to="/landing-page">
                   <i className="fa fa-laptop" />
                   IT Services
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/accounting-services">
-                  <i className="fa fa-dollar-sign" />
-                  Accounting Services
+                <DropdownItem tag={Link} to="/accounting-page">
+                <span style={{ marginLeft: "8px" }}><i className="fa fa-dollar-sign" />
+                  Accounting Services</span>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
             <NavItem>
-              <NavLink tag={Link} to="/profile-page">
+              <NavLink tag={Link} to="/register-page">
                 <i className="fa fa-phone" />
                 Contact
               </NavLink>
@@ -117,4 +128,4 @@ export default function IndexNavbar() {
       </Container>
     </Navbar>
   );
-}
+}  

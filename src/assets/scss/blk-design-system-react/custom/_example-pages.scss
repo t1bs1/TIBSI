@@ -293,7 +293,7 @@
       min-height: 550px;
 
       .container {
-        padding-top: 30vh;
+        padding-top: 16vh;
       }
 
       .path {
@@ -303,6 +303,27 @@
       }
     }
 
+    .vision-mission-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .vision-mission-image {
+      flex: 1;
+      margin-right: 50px;
+      position: relative;
+    }
+    
+    .vision-mission-image img,
+    .mission-image img {
+      width: 396px;
+      height: 590px;
+    }
+    
     .info {
       padding: 40px 0 0;
 
@@ -312,10 +333,16 @@
       }
     }
 
+    .contact-03 {
+      position: absolute;
+      top: 67.5px;
+      right: 330px;
+    }
+
     .profile-title {
       position: absolute;
-      top: 110px;
-      left: 60px;
+      top: 51px;
+      right: 250px;
     }
 
     .profile-description {
@@ -390,7 +417,7 @@
     .card {
       .card-header {
         .profile-title {
-          top: 125px;
+          top: 75px;
         }
       }
     }
@@ -473,6 +500,9 @@
     }
 
     .square{
+        .square {
+          z-index: 0;
+        }
       position: absolute;
       transition: 0.5s ease-out;
       border-radius: 2px;
@@ -614,7 +644,7 @@
 
 @include media-breakpoint-up(md) {
   .info:first-of-type {
-    padding-top: 60%;
+    padding-top: 20%;
   }
 }
 

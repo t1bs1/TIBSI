@@ -37,6 +37,7 @@ a{
         color: $primary;
     }
 }
+
 h1, .h1 {
     padding-left: 20px;
     line-height: 1.0;
@@ -49,6 +50,70 @@ h1, .h1 {
     }
 
 }
+
+.text-center-epic {
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .about-part {
+    margin-top: 4%;
+    text-align: left;
+    margin-bottom: 50px;
+
+    .vision-mission-text,
+    .mission-text {
+      flex: 1;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .vision-text,
+    .mission-text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .vision-description {
+        padding-top: 26em;
+        padding-right: 18.5em;
+        vertical-align: middle;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: right;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .vision-img {
+        height: 400px;
+        padding-left: 23.8em;
+        margin-top: 2em;
+      }
+
+    .mission-description {
+        padding-left: 1em;
+        vertical-align: middle;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: left;
+        position: absolute;
+        top: 30%;
+        left: 66%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .mission-img {
+        width: 640px;
+        height: 360px;
+        padding-left: 50px;
+      }
+  }
+
 h2, .h2{
     margin-bottom: $margin-base-vertical * 2;
     line-height: 1.2;

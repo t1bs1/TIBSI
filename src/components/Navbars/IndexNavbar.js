@@ -58,9 +58,12 @@ export default function IndexNavbar() {
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand to="/" tag={Link} id="navbar-brand" className="navbar-brand-text">
+          <NavbarBrand to="/" tag={Link} id="navbar-brand-sm" className="navbar-brand-text d-none d-lg-block">
             <span>TIBSI • </span>
             The Investream Business Solutions Inc.
+          </NavbarBrand>
+          <NavbarBrand to="/" tag={Link} id="navbar-brand" className="navbar-brand-text d-lg-none">
+            <span>TIBSI • </span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
             Designed and Coded by ASTRO-IT OJT-Software Engineer
@@ -74,7 +77,9 @@ export default function IndexNavbar() {
             <span className="navbar-toggler-bar bar2" />
             <span className="navbar-toggler-bar bar3" />
           </button>
-          {collapseOpen && (
+        </div>
+        <Collapse navbar isOpen={collapseOpen} onExited={closeCollapse}>
+        {collapseOpen && (
             <Button
               className="close ml-auto text-white"
               aria-label="Close"
@@ -83,8 +88,6 @@ export default function IndexNavbar() {
               <span aria-hidden={true}>&times;</span>
             </Button>
           )}
-        </div>
-        <Collapse navbar isOpen={collapseOpen} onExited={closeCollapse}>
           <Nav navbar className="ml-auto">
             <NavItem>
               <NavLink tag={Link} to="/components">
@@ -93,7 +96,7 @@ export default function IndexNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/register-page">
+              <NavLink tag={Link} to="/profile-page">
                 <i className="fa fa-info-circle" />
                 About
               </NavLink>
@@ -104,18 +107,18 @@ export default function IndexNavbar() {
                 Services
               </DropdownToggle>
               <DropdownMenu>
-                <DropdownItem tag={Link} to="/it-services">
+                <DropdownItem tag={Link} to="/landing-page">
                   <i className="fa fa-laptop" />
                   IT Services
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/accounting-services">
-                  <i className="fa fa-dollar-sign" />
-                  Accounting Services
+                <DropdownItem tag={Link} to="/accounting-page">
+                <span style={{ marginLeft: "8px" }}><i className="fa fa-dollar-sign" />
+                  Accounting Services</span>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
             <NavItem>
-              <NavLink tag={Link} to="/profile-page">
+              <NavLink tag={Link} to="/register-page">
                 <i className="fa fa-phone" />
                 Contact
               </NavLink>
