@@ -127,7 +127,7 @@ const Signup = () => {
               <div className="card-image-container">
                 <img
                   className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/mike.jpg")}
+                  src={require("assets/img/lexie.jpg")}
                   alt={member.name3}
                 />
               </div>
