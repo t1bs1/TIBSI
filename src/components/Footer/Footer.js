@@ -86,8 +86,7 @@ export default function Footer() {
                   IT Services
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/accounting-page">
-                <span style={{ marginLeft: "8px" }}>
-                  Accounting Services</span>
+                  Accounting Services
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>

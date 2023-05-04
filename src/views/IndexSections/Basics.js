@@ -30,22 +30,7 @@ const carouselItems = [
 ];
 
 export default function Basics() {
-  const slider1 = React.useRef(null);
-  const slider2 = React.useRef(null);
-  React.useEffect(() => {
-    Slider.create(slider1.current, {
-      start: [40],
-      connect: [true, false],
-      step: 1,
-      range: { min: 0, max: 100 }
-    });
-    Slider.create(slider2.current, {
-      start: [20, 60],
-      connect: [false, true, false],
-      step: 1,
-      range: { min: 0, max: 100 }
-    });
-  }, []);
+
   return (
     <div className="section section-basic" id="basic-elements">
       <img alt="..." className="path" src={require("assets/img/path1.png")} />
@@ -60,18 +45,11 @@ export default function Basics() {
               <UncontrolledCarousel
                 items={carouselItems}
                 indicators={false}
-                autoPlay={false}
+                autoPlay={true}
               />
             </Col>
           </Row>
         </Container>
-        <Row>
-          <Col lg="3" sm="6">
-              <div className="slider" ref={slider1} />
-              <br />
-              <div className="slider slider-info mb-3" ref={slider2} />
-          </Col>
-        </Row>
       </Container>
     </div>
   );
