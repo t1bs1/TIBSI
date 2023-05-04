@@ -3,7 +3,7 @@ import Swiper from "swiper";
 
 const teamMembers = [
   {
-    name: "Gilfed Petancio",
+    name: "Gilfred Mautganon Petancio",
     position: "Technical Support/IT Man",
     details:
       "Gilfred is an experienced IT Man with over 10 years of experience. He has managed numerous successful projects across various industries.",
@@ -76,15 +76,10 @@ const Signup = () => {
     <div className="swiper-container">
       <div className="swiper-wrapper">
         {teamMembers.map((member, index) => (
-          <div className={`swiper-slide ${index === currentMember ? "active" : ""}`} key={index}>
-                                 
-                                 <div className="card-container">
+          <div className={`swiper-slide ${index === currentMember ? "active" : ""}`} key={index}>             
+            <div className="card-container">
               <div className="card-image-container">
-                <img
-                  className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/gilfred.jpg")}
-                  alt={member.name}
-                />
+              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/gilfred.jpg")} 1x, ${require("assets/img/gilfred.jpg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
               </div>
               <div className="card-details">
                 <h2>{member.name}</h2>
@@ -95,11 +90,7 @@ const Signup = () => {
             
             <div className="card-container">
               <div className="card-image-container">
-                <img
-                  className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/james.jpg")}
-                  alt={member.name1}
-                />
+              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/james.jpg")} 1x, ${require("assets/img/james.jpg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
               </div>
               <div className="card-details">
                 <h2>{member.name1}</h2>
@@ -110,11 +101,7 @@ const Signup = () => {
 
             <div className="card-container">
               <div className="card-image-container">
-                <img
-                  className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/james.jpg")}
-                  alt={member.name2}
-                />
+              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/james.jpg")} 1x, ${require("assets/img/james.jpg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
               </div>
               <div className="card-details">
                 <h2>{member.name2}</h2>
@@ -125,11 +112,7 @@ const Signup = () => {
 
             <div className="card-container">
               <div className="card-image-container">
-                <img
-                  className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/lexie.jpg")}
-                  alt={member.name3}
-                />
+              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/lexie.jpg")} 1x, ${require("assets/img/lexie.jpg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
               </div>
               <div className="card-details">
                 <h2>{member.name3}</h2>
@@ -140,11 +123,7 @@ const Signup = () => {
 
             <div className="card-container">
               <div className="card-image-container">
-                <img
-                  className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/liam.jpg")}
-                  alt={member.name4}
-                />
+              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/liam.jpg")} 1x, ${require("assets/img/liam.jpg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
               </div>
               <div className="card-details">
                 <h2>{member.name4}</h2>
@@ -155,11 +134,7 @@ const Signup = () => {
 
             <div className="card-container">
               <div className="card-image-container">
-                <img
-                  className="card-image img-center img-fluid rounded-circle"
-                  src={require("assets/img/paul.jpg")}
-                  alt={member.name5}
-                />
+              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/paul.jpg")} 1x, ${require("assets/img/paul.jpg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
               </div>
               <div className="card-details">
                 <h2>{member.name5}</h2>
