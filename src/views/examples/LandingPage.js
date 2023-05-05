@@ -51,7 +51,7 @@ export default function LandingPage() {
         <Container>
             <Row className="row-grid justify-content-between align-items-center">
               <Col md="5" style={{marginTop: "-4.5em"}}>
-                <h2>Welcome to TIBSI IT-Services</h2>
+                <h2><strong>Welcome to TIBSI IT-Services</strong></h2>
                 <p className="text-justify">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
                   Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
@@ -62,7 +62,7 @@ export default function LandingPage() {
                 <img alt="..." className="" src={require("assets/img/it-services.png")}/>
               </Col>
               <Col md="5">
-                <h2>Latest News</h2>
+                <h2><strong>Latest News</strong></h2>
                 <p className="text-justify">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
                   Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
@@ -70,7 +70,7 @@ export default function LandingPage() {
                   Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
                   Etiam finibus bibendum mauris sed commodo. Duis rutrum leo vitae mauris ullamcorper, non pellentesque nunc rhoncus.
                 </p>
-                <h2 style={{marginTop: "2em"}}>OUR SERVICES</h2>
+                <h2 style={{marginTop: "2em"}}><strong>OUR SERVICES</strong></h2>
                 <p className="text-justify">
                 <ul>
                   <li>Network installation and setup</li>
