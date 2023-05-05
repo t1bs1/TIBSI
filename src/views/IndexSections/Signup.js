@@ -3,7 +3,7 @@ import Swiper from "swiper";
 
 const teamMembers = [
   {
-    name: "Gilfred Mautganon Petancio",
+    name: "Gilfred Petancio",
     position: "Technical Support/IT Man",
     details:
       "Gilfred is an experienced IT Man with over 10 years of experience. He has managed numerous successful projects across various industries.",
@@ -90,7 +90,7 @@ const Signup = () => {
             
             <div className="card-container">
               <div className="card-image-container">
-              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/james.jpg")} 1x, ${require("assets/img/james.jpg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
+              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/ralph.jpeg")} 1x, ${require("assets/img/ralph.jpeg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
               </div>
               <div className="card-details">
                 <h2>{member.name1}</h2>
