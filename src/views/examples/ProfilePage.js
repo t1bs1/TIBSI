@@ -58,7 +58,6 @@ export default function RegisterPage() {
               </span>
                 </h2>
                   </div>
-
               <div className="mission-img">
             <img src={require("assets/img/vision.jpg")} alt="mission-img" />
           </div>
@@ -75,7 +74,7 @@ export default function RegisterPage() {
                     </div>
                   </div>
                   
-                  <div className="vision">
+                  <div className="vision">                   
                     <div className="vision-img">
                       <img src={require("assets/img/mission.jpg")} className="vision-img" alt="vision-img"/>
                   </div>
