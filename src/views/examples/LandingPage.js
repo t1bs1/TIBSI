@@ -70,7 +70,10 @@ export default function LandingPage() {
                   Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
                   Etiam finibus bibendum mauris sed commodo. Duis rutrum leo vitae mauris ullamcorper, non pellentesque nunc rhoncus.
                 </p>
-                <h2 style={{marginTop: "2em"}}><strong>OUR SERVICES</strong></h2>
+                <h2 style={{marginTop: "2em"}}>
+              <span style={{borderLeft: "5px solid #c71585", padding: "0 0.1em"}}></span>
+            <strong>OUR SERVICES</strong>
+              </h2>
                 <p className="text-justify">
                 <ul>
                   <li>Network installation and setup</li>
