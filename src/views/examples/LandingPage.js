@@ -5,9 +5,7 @@ import {
   Container,
   Row,
   Col,
-  Button,
-  NavLink,
-  NavItem
+  Button
 } from "reactstrap";
 
 // core components
@@ -27,20 +25,11 @@ export default function LandingPage() {
     <>
       <ExamplesNavbar />
       <div className="wrapper">
-        <div className="page-header">
-          <div className="content-center">
-            <Row className="row-grid justify-content-between align-items-center text-left">
-            <Col lg="6" md="6">
-                <h1 className="">Welcome to Our IT Services</h1>
-              </Col>
-            </Row>
-          </div>
-        </div>
         <section className="section section-lg section-safe">
         <Container>
             <Row className="row-grid justify-content-between">
               <Col md="5">
-                <h1 className="banner-text-header"><strong> Professional IT Services from the TIBSI IT-Personnel</strong>
+                <h1 className="banner-text-header"><strong> Professional IT Services from the</strong><br/><strong> TIBSI IT-Personnel</strong>
                 </h1>
                   <p className="text-white banner-text">
                     At our IT services company, we are committed to providing top-quality IT solutions to our clients. Our team of experienced professionals is dedicated to ensuring that your IT needs are met, and your business can operate efficiently.
@@ -49,12 +38,7 @@ export default function LandingPage() {
             </Row>
           </Container>
                 <div className="banner-overlay">
-                <Button color="primary" size="lg" className="banner-button">
-                <NavItem>
-                <NavLink to="/profile-page" tag={Link}>
-                  About Us
-                </NavLink>
-              </NavItem></Button>
+                <Button color="primary" size="lg" className="banner-button" to="/profile-page" tag={Link}>About Us</Button>
                 </div>
               <img alt="..." className="banner" src={require("assets/img/banner.jpg")}/>
             <img
@@ -64,7 +48,49 @@ export default function LandingPage() {
             />
           </section>
         <section className="section section-lg">
-
+        <Container>
+            <Row className="row-grid justify-content-between align-items-center">
+              <Col md="5" style={{marginTop: "-4.5em"}}>
+                <h2>Welcome to TIBSI IT-Services</h2>
+                <p className="text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
+                  Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
+                  Etiam finibus bibendum mauris sed commodo. Duis rutrum leo vitae mauris ullamcorper, non pellentesque nunc rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
+                  Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
+                  Etiam finibus bibendum mauris sed commodo. Duis rutrum leo vitae mauris ullamcorper, non pellentesque nunc rhoncus.
+                </p>
+                <img alt="..." className="" src={require("assets/img/it-services.png")}/>
+              </Col>
+              <Col md="5">
+                <h2>Latest News</h2>
+                <p className="text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
+                  Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
+                  Etiam finibus bibendum mauris sed commodo. Duis rutrum leo vitae mauris ullamcorper, non pellentesque nunc rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
+                  Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
+                  Etiam finibus bibendum mauris sed commodo. Duis rutrum leo vitae mauris ullamcorper, non pellentesque nunc rhoncus.
+                </p>
+                <h2 style={{marginTop: "2em"}}>OUR SERVICES</h2>
+                <p className="text-justify">
+                <ul>
+                  <li>Network installation and setup</li>
+                  <br/>
+                  <li>Data backup and recovery</li>
+                  <br/>
+                  <li>Cloud computing solutions</li>
+                  <br/>
+                  <li>Cybersecurity and virus protection</li>
+                  <br/>
+                  <li>Software and hardware upgrades</li>
+                  <br/>
+                  <li>Remote IT support</li>
+                  <br/>
+                  <li>24/7 monitoring and maintenance</li>
+                  </ul>
+                </p>
+              </Col>
+            </Row>
+          </Container>
     </section>
     <Footer />
     </div>
