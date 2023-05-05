@@ -62,13 +62,18 @@ export default function LandingPage() {
                 <img alt="..." className="" src={require("assets/img/it-services.png")}/>
               </Col>
               <Col md="5">
-                <h2><strong>Latest News</strong></h2>
+                <h2 style={{marginTop: "-1em"}}><strong>Latest News</strong></h2>
+                <div className="date">May 3, 2023</div>
                 <p className="text-justify">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
-                  Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
-                  Etiam finibus bibendum mauris sed commodo. Duis rutrum leo vitae mauris ullamcorper, non pellentesque nunc rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
-                  Nulla tristique mauris vitae risus auctor, ut ultricies odio consequat. Praesent et lobortis odio.
-                  Etiam finibus bibendum mauris sed commodo. Duis rutrum leo vitae mauris ullamcorper, non pellentesque nunc rhoncus.
+                </p>
+                <div className="date">May 4, 2023</div>
+                <p className="text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
+                </p>
+                <div className="date">May 5, 2023</div>
+                <p className="text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis magna at risus aliquam viverra.
                 </p>
                 <h2 style={{marginTop: "2em"}}>
               <span style={{borderLeft: "5px solid #c71585", padding: "0 0.1em"}}></span>
@@ -94,8 +99,8 @@ export default function LandingPage() {
               </Col>
             </Row>
           </Container>
-    </section>
-    <Footer />
+        </section>
+      <Footer />
     </div>
   </>
 )};

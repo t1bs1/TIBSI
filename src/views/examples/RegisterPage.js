@@ -103,7 +103,7 @@ export default function RegisterPage() {
             </div>
               </Col>
               <Col className="ml-auto text-center" md="4">
-  <div className="info">
+  <div className="info" style={{marginLeft: "-1em", marginTop: "-4em"}}>
     <div className="icon icon-primary">
       <i className="tim-icons icon-square-pin" />
     </div>
@@ -118,7 +118,7 @@ export default function RegisterPage() {
   </div>
 </Col>
 <Col className="ml-auto text-center" md="4">
-  <div className="info">
+  <div className="info" style={{marginLeft: "-10em", marginTop: "-4em"}}>
     <div className="icon icon-primary">
       <i className="tim-icons icon-mobile" />
           </div>
