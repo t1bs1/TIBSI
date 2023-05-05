@@ -63,11 +63,11 @@ h1, .h1 {
 */
 
 .banner {
-    margin-top: 1em;
-    width: auto;
+    margin-top: -11.74em;
+    width: 100em;
     background-size: cover;
     background-position: center;
-    height: auto;
+    height: 35em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,25 +76,41 @@ h1, .h1 {
   }
   
   .banner-overlay {
-    width: 540px;
-    height: 450px;
+    width: 440px;
+    height: 490px;
     margin-top: 1em;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 10%;
-    left: 10%;
-    background-color: #525f7f;
+    top: 10.9%;
+    left: 9%;
+    background-color: #6d0b44;
     opacity: 0.8;
     z-index: 1;
   }  
 
   .banner-text {
+    text-align: left;
     position: relative;
     z-index: 2;
-    margin-left: 4em;
+    padding-right: 1em;
+  }
+
+  .banner-text-header {
+    margin-top: 1.5em;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+  }
+
+  .banner-button {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    transform: translateX(-50%, 50%);
+
   }
 
 .text-center-epic {
@@ -165,13 +181,12 @@ h1, .h1 {
   }
 
   .text-white {
-    margin-top: 10em;
     left: 0;
     padding: 2em;
     vertical-align: middle;
     font-size: 16px;
     line-height: 1.5;
-    text-align: center;
+    text-align: left;
     position: absolute;
   }
 

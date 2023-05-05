@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Container,
   Row,
-  Col
+  Col,
+  Button,
+  NavLink,
+  NavItem
 } from "reactstrap";
 
 // core components
@@ -36,21 +40,23 @@ export default function LandingPage() {
         <Container>
             <Row className="row-grid justify-content-between">
               <Col md="5">
-                  <p className="text-white banner-text">
-                    At our IT services company, we are committed to providing top-quality IT solutions to our clients. Our team of experienced professionals is dedicated to ensuring that your IT needs are met, and your business can operate efficiently.
-                  </p>
-              </Col>
-              <Col md="5">
+                <h1 className="banner-text-header"><strong> Professional IT Services from the TIBSI IT-Personnel</strong>
+                </h1>
                   <p className="text-white banner-text">
                     At our IT services company, we are committed to providing top-quality IT solutions to our clients. Our team of experienced professionals is dedicated to ensuring that your IT needs are met, and your business can operate efficiently.
                   </p>
               </Col>
             </Row>
           </Container>
-          <Container>
-                <div className="banner-overlay"></div>
+                <div className="banner-overlay">
+                <Button color="primary" size="lg" className="banner-button">
+                <NavItem>
+                <NavLink to="/profile-page" tag={Link}>
+                  About Us
+                </NavLink>
+              </NavItem></Button>
+                </div>
               <img alt="..." className="banner" src={require("assets/img/banner.jpg")}/>
-          </Container>
             <img
               alt="..."
               className="path"
@@ -58,6 +64,7 @@ export default function LandingPage() {
             />
           </section>
         <section className="section section-lg">
+
     </section>
     <Footer />
     </div>
