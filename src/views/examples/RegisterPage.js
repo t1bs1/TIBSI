@@ -135,8 +135,6 @@ export default function RegisterPage() {
             </Row>
           </Container>
         </section>
-        <section className="section">
-        </section>
         <Footer />
       </div>
     </>
