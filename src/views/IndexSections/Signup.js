@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import Swiper from "component/variable/swiper.js";
+import Swiper from "swiper";
 
 const teamMembers = [
   {
@@ -7,20 +7,47 @@ const teamMembers = [
     position: "Technical Support/IT Man",
     details:
       "Gilfred is an experienced IT Man with over 10 years of experience. He has managed numerous successful projects across various industries.",
+    image: require("assets/img/gilfred.jpg"),
   },
   {
-    name1: "Ralph Gacayan",
-    position1: "Software Engineer",
-    details1:
+    name: "Ralph Gacayan",
+    position: "Software Engineer",
+    details:
       "Ralph is a skilled software engineer with expertise in React and Node.js. He has worked on several web applications and is passionate about building great software.",
-  },
-  {
-    name2: "Dale Enrico Calvo",
-    position2: "OJT - Software Engineer",
-    details2:
-      "Dale is a talented OJT with a keen eye for detail. He has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
+    image: require("assets/img/ralph.jpg"),
   },
 
+  {
+    name: "Dale Enrico Calvo",
+    position: "OJT - Software Engineer",
+    details:
+      "Dale is a talented OJT with a keen eye for detail. He has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
+    image: require("assets/img/dale.jpg"),
+  },
+
+  {
+    name: "Lexie Lore",
+    position: "HR Assistant",
+    details:
+      "Lexie Lore is a talented designer with a keen eye for detail. She has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
+    image: require("assets/img/lexie.jpg"),
+  },
+
+  {
+    name: "Liam Neeson",
+    position: "Purchasing",
+    details:
+      "Liam Neeson is a talented designer with a keen eye for detail. He has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
+    image: require("assets/img/liam.jpg"),
+  },
+
+  {
+    name: "Paul Walker",
+    position: "Driver",
+    details:
+      "Paul Walker is a talented designer with a keen eye for detail. He has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
+    image: require("assets/img/paul.jpg"),
+  },
 ];
 
 const Signup = () => {
@@ -29,13 +56,13 @@ const Signup = () => {
 
   const handlePrev = () => {
     swiperRef.current.slidePrev();
-    const newIndex = (currentMember - 1 + teamMembers.length) % teamMembers.length;
+    const newIndex = (currentMember - 1 + 3) % 3;
     setCurrentMember(newIndex);
   };
 
   const handleNext = () => {
     swiperRef.current.slideNext();
-    const newIndex = (currentMember + 1) % teamMembers.length;
+    const newIndex = (currentMember + 1) % 3;
     setCurrentMember(newIndex);
   };
 
@@ -43,7 +70,7 @@ const Signup = () => {
     const swiper = new Swiper(".swiper-container", {
       loop: true,
       spaceBetween: 30,
-      slidesPerView: 1,
+      slidesPerView: 3,
       navigation: {
         prevEl: ".swiper-arrow-prev",
         nextEl: ".swiper-arrow-next",
@@ -56,10 +83,20 @@ const Signup = () => {
     <div className="swiper-container">
       <div className="swiper-wrapper">
         {teamMembers.map((member, index) => (
-          <div className={`swiper-slide ${index === currentMember ? "active" : ""}`} key={index}>             
+          <div
+            className={`swiper-slide ${
+              index === currentMember ? "active" : ""
+            }`}
+            key={index}
+          >
             <div className="card-container">
               <div className="card-image-container">
-              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/gilfred.jpg")} 1x, ${require("assets/img/gilfred.jpg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
+                <img
+                  className="card-image img-center img-fluid rounded-circle"
+                  srcSet={`${member.image} 1x, ${member.image} 2x`}
+                  sizes="(min-width: 768px) 200px, 100px"
+                  alt={member.name}
+                />
               </div>
               <div className="card-details">
                 <h2>{member.name}</h2>
@@ -67,29 +104,6 @@ const Signup = () => {
                 <p>{member.details}</p>
               </div>
             </div>
-            
-            <div className="card-container">
-              <div className="card-image-container">
-              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/ralph.jpeg")} 1x, ${require("assets/img/ralph.jpeg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
-              </div>
-              <div className="card-details">
-                <h2>{member.name1}</h2>
-                <h3>{member.position1}</h3>
-                <p>{member.details1}</p>
-              </div>
-            </div>
-
-            <div className="card-container">
-              <div className="card-image-container">
-              <img className="card-image img-center img-fluid rounded-circle" srcSet={`${require("assets/img/james.jpg")} 1x, ${require("assets/img/james.jpg")} 2x`} sizes="(min-width: 768px) 200px, 100px" alt={member.name} />
-              </div>
-              <div className="card-details">
-                <h2>{member.name2}</h2>
-                <h3>{member.position2}</h3>
-                <p>{member.details2}</p>
-              </div>
-            </div>
-            
           </div>
         ))}
       </div>
@@ -98,7 +112,7 @@ const Signup = () => {
       </div>
       <div className="swiper-arrow-next" onClick={handleNext}>
         <i className="fas fa-chevron-right"></i>
-      </div>  
+      </div>
     </div>
   );
 };

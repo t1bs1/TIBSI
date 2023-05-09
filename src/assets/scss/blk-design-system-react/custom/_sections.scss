@@ -31,6 +31,8 @@
   }
   
   .swiper-slide {
+    width: calc((100% - 60px) / 3); /* 60px is the combined width of the left and right margins */
+    margin-right: 30px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -112,7 +114,7 @@
   align-items: center;
   justify-content: center;
   height: 400px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #b2b2b2;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -143,17 +145,18 @@
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 24px;
+  color: #000000;
 }
 
 .card-details h3 {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 18px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .card-details p {
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.5;

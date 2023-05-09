@@ -7,7 +7,6 @@ import Footer from "components/Footer/Footer.js";
 
 // sections for this page/view
 import Basics from "views/IndexSections/Basics.js";
-import Navbars from "views/IndexSections/Navbars.js";
 import Signup from "views/IndexSections/Signup.js";
 
 export default function Index() {
@@ -25,7 +24,6 @@ export default function Index() {
         <PageHeader />
         <div className="main">
           <Basics />
-          <Navbars />
           <Signup />
         </div>
         <Footer />
