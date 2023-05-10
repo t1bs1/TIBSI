@@ -14,59 +14,64 @@ const sampleClients = [
 ];
 
 function ProjectList() {
-    const [projects] = useState(sampleProjects);
-  
-    return (
-      <div>
-        {projects.map(project => (
-          <div key={project.id} className="project-card">
-            <img src={project.image} alt={project.name} />
-            <div className="overlay">
-              <div className="overlay-content">
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  }
-  
+  const [projects] = useState(sampleProjects);
 
-  function ClientList() {
-    const [clients] = useState(sampleClients);
-  
-    return (
-      <div>
-        {clients.map(client => (
-          <div key={client.id} className="client-card">
-            <img src={client.image} alt={client.name} />
-            <div className="overlay">
-              <div className="overlay-content">
-                <h3>{client.name}</h3>
-                <p>{client.email}</p>
-              </div>
+  return (
+    <div className="project-list">
+      {projects.map(project => (
+        <div key={project.id} className="project-card">
+          <img src={project.image} alt={project.name} />
+          <div className="overlay">
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+            <div className="button-container">
+              <a href="#">
+                Learn more <i className="fas fa-arrow-right"></i>
+              </a>
             </div>
           </div>
-        ))}
-      </div>
-    );
-  }
-  
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ClientList() {
+  const [clients] = useState(sampleClients);
+
+  return (
+    <div className="client-list">
+      {clients.map(client => (
+        <div key={client.id} className="client-card">
+          <img src={client.image} alt={client.name} />
+          <div className="overlay">
+            <h3>{client.name}</h3>
+            <p>ID: {client.id}</p>
+            <p>Email: {client.email}</p>
+            <div className="button-container">
+              <a href="#">
+                Contact <i className="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function App() {
   return (
     <Container>
-    <div className="app">
       <header>
+        <center>
         <h1>Company Name</h1>
+        </center>
       </header>
       <main>
         <ProjectList />
         <ClientList />
       </main>
-    </div>
     </Container>
   );
 }

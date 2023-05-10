@@ -136,39 +136,78 @@
   
   .project-card, .client-card {
     position: relative;
+    display: inline-block;
     width: 250px;
-    height: 350px;
+    height: 250px;
+    margin: 10px;
     overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
   }
   
   .project-card img, .client-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    transition: transform 0.2s ease;
   }
   
-  .project-card .overlay, .client-card .overlay {
+  .project-card:hover img, .client-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: transform 0.2s ease;
+    transform: translateY(100%);
   }
   
   .project-card:hover .overlay, .client-card:hover .overlay {
-    opacity: 1;
+    transform: translateY(0);
   }
   
-  .project-card .overlay-content, .client-card .overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  .overlay h3 {
     color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .overlay p {
+    color: #ccc;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  
+  .overlay a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .overlay a:hover {
+    background-color: #0056b3;
+  }
+  
+  .overlay a i {
+    margin-left: 5px;
+  }  
+  
+  .gallery::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .gallery {
+    text-align: center;
+    margin: auto;
   }
   
   
