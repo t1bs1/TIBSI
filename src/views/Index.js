@@ -8,6 +8,7 @@ import Footer from "components/Footer/Footer.js";
 // sections for this page/view
 import Basics from "views/IndexSections/Basics.js";
 import Signup from "views/IndexSections/Signup.js";
+import Proclients from "views/IndexSections/Proclients.js";
 
 export default function Index() {
   React.useEffect(() => {
@@ -25,6 +26,7 @@ export default function Index() {
         <div className="main">
           <Basics />
           <Signup />
+          <Proclients />
         </div>
         <Footer />
       </div>

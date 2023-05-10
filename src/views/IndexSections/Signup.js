@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Container } from "reactstrap";
 import Swiper from "swiper";
 
 const teamMembers = [
@@ -29,7 +30,7 @@ const teamMembers = [
     name: "Lexie Lore",
     position: "HR Assistant",
     details:
-      "Lexie Lore is a talented designer with a keen eye for detail. She has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
+      "Lexie is a talented designer with a keen eye for detail. She has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
     image: require("assets/img/lexie.jpg"),
   },
 
@@ -37,7 +38,7 @@ const teamMembers = [
     name: "Liam Neeson",
     position: "Purchasing",
     details:
-      "Liam Neeson is a talented designer with a keen eye for detail. He has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
+      "Liam Neeson is a skilled Purchasing Manager with a proven track record of success. He has extensive experience in procurement, supplier management, and contract negotiations.",
     image: require("assets/img/liam.jpg"),
   },
 
@@ -45,7 +46,7 @@ const teamMembers = [
     name: "Paul Walker",
     position: "Driver",
     details:
-      "Paul Walker is a talented designer with a keen eye for detail. He has designed several award-winning websites and mobile apps, and is always looking for new design challenges.",
+      "Paul Walker was a skilled and experienced company driver. He had a strong record of safe driving and a deep understanding of traffic rules and regulations.",
     image: require("assets/img/paul.jpg"),
   },
 ];
@@ -80,41 +81,43 @@ const Signup = () => {
   }, []);
 
   return (
-    <div className="swiper-container">
-      <div className="swiper-wrapper">
-        {teamMembers.map((member, index) => (
-          <div
-            className={`swiper-slide ${
-              index === currentMember ? "active" : ""
-            }`}
-            key={index}
-          >
-            <div className="card-container">
-              <div className="card-image-container">
-                <img
-                  className="card-image img-center img-fluid rounded-circle"
-                  srcSet={`${member.image} 1x, ${member.image} 2x`}
-                  sizes="(min-width: 768px) 200px, 100px"
-                  alt={member.name}
-                />
-              </div>
-              <div className="card-details">
-                <h2>{member.name}</h2>
-                <h3>{member.position}</h3>
-                <p>{member.details}</p>
+    <Container>
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+          {teamMembers.map((member, index) => (
+            <div
+              className={`swiper-slide ${
+                index === currentMember ? "active" : ""
+              }`}
+              key={index}
+            >
+              <div className="card-container">
+                <div className="card-image-container">
+                  <img
+                    className="card-image img-center img-fluid rounded-circle"
+                    srcSet={`${member.image} 1x, ${member.image} 2x`}
+                    sizes="(min-width: 768px) 200px, 100px"
+                    alt={member.name}
+                  />
+                </div>
+                <div className="card-details">
+                  <h2>{member.name}</h2>
+                  <h3>{member.position}</h3>
+                  <p>{member.details}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="swiper-arrow-prev" onClick={handlePrev}>
+          <i className="fas fa-chevron-left"></i>
+        </div>
+        <div className="swiper-arrow-next" onClick={handleNext}>
+          <i className="fas fa-chevron-right"></i>
+        </div>
       </div>
-      <div className="swiper-arrow-prev" onClick={handlePrev}>
-        <i className="fas fa-chevron-left"></i>
-      </div>
-      <div className="swiper-arrow-next" onClick={handleNext}>
-        <i className="fas fa-chevron-right"></i>
-      </div>
-    </div>
-  );
+    </Container>
+  );  
 };
 
 export default Signup;
