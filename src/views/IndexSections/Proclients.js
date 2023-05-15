@@ -3,20 +3,20 @@ import { Container } from 'reactstrap';
 
 const sampleProjects = [
   { id: 1, 
-    name: 'Project A', 
-    description: 'Donation Drive for student of Magdolinog Elem. School.', 
+    name: 'Donation Drive for student of Magdolinog Elem. School.', 
+    description: 'Donate School supplies to the elementary students of Magdolinog Elem. School Borbon Cebu.', 
     image: 'https://www.astro-foundation.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgtigz0nv%2Fimage%2Fupload%2Fv1669365535%2Fviber_image_2022_10_24_11_34_03_527_9213f160d3.jpg&w=3840&q=75' 
   },
   { id: 2, 
-    name: 'Project B', 
-    description: 'Community Outreach at DepEd Cebu Province', 
+    name: 'Community Outreach at DepEd Cebu Province', 
+    description: 'The foundation donated bond paper to help teachers in DepEd Lapu-Lapu and Cebu Province print learning materials for distance learning during the pandemic, as they have limited funds.', 
     image: 'https://www.astro-foundation.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgtigz0nv%2Fimage%2Fupload%2Fv1666929320%2Fviber_image_2022_10_24_11_42_48_326_4e2578b849.jpg&w=3840&q=75' 
   },
   
   { id: 3, 
-    name: 'Project C', 
-    description: 'Community Outreach - Typhoon Odette Victims', 
-    image: 'https://www.astro-foundation.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgtigz0nv%2Fimage%2Fupload%2Fv1669352876%2FMicrosoft_Teams_image_4_7a7b5c50d6.jpg&w=3840&q=75' 
+    name: 'Community Outreach - Typhoon Odette Victims', 
+    description: 'To distribute relief goods to families affected by the typhoon Odette in Borbon, Cebu.', 
+    image: 'https://www.astro-foundation.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgtigz0nv%2Fimage%2Fupload%2Fv1666929532%2Fviber_image_2022_08_05_10_29_13_438_2cec32bb5a.jpg&w=3840&q=75' 
   }
 ];
 
@@ -88,7 +88,6 @@ function ClientList() {
 function Proclient() {
   return (
     <Container>
-    <div className='project-clients-container'>
       <header>
         <center>
         <h1><strong>Astro Charitable and Scholarship Foundation, Inc.</strong></h1>
@@ -96,7 +95,6 @@ function Proclient() {
       </header>
         <ProjectList />
         <ClientList />
-    </div>
     </Container>
   );
 }

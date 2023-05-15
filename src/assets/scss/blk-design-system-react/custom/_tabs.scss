@@ -133,19 +133,19 @@
     justify-content: center;
   }
   
-  .project-clients-container {
+  .client-list  {
     margin-bottom: 10em;
-    border-radius: 10px;
-    align-items: center;
-    margin-right: 5em;
   }
   
   .project-card, .client-card {
     position: relative;
     display: inline-block;
-    width: 400px;
-    height: 400px;
+    width: 370px;
+    height: 370px;
+    margin: 4px;
     overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
   }
   
   .project-card img, .client-card img {
