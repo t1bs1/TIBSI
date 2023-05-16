@@ -2,7 +2,7 @@ import axios from "axios";
 import { useRef, useState } from "react"
 import { youtube_parser } from "./utils";
 
-function MediaConvertNow() {
+function App() {
   const inputUrlRef = useRef();
   const [urlResult, setUrlResult] = useState(null);
 
@@ -50,4 +50,4 @@ function MediaConvertNow() {
   )
 }
 
-export default MediaConvertNow;
+export default App
