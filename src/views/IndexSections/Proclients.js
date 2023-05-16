@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container } from 'reactstrap';
-import App from './App';
 
 const sampleProjects = [
   { id: 1, 
@@ -96,7 +95,6 @@ function Proclient() {
       </header>
         <ProjectList />
         <ClientList />
-        <App />
     </Container>
   );
 }
