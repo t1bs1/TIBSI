@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container } from 'reactstrap';
-import MediaConvertNow from './MediaConvertNow';
+import App from './App';
 
 const sampleProjects = [
   { id: 1, 
