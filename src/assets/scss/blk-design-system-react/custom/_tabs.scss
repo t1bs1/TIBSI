@@ -132,8 +132,16 @@
     grid-gap: 20px;
     justify-content: center;
   }
+
+  .project-list {
+    margin-left: -1em;
+    margin-right: -1em;
+    margin-bottom: 1em;
+  }
   
   .client-list  {
+    margin-left: -1em;
+    margin-right: -1em;
     margin-bottom: 10em;
   }
   
@@ -144,7 +152,7 @@
     height: 370px;
     margin: 4px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 2px;
     align-items: center;
   }
   
@@ -157,6 +165,17 @@
   .project-card:hover img, .client-card:hover img {
     transform: scale(1.1);
   }
+
+  /*
+  .team-label {
+    position: sticky;
+    top: 10em; Adjust this value as per your requirement 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    padding: 10px;
+  } 
+  */
   
   .overlay {
     position: absolute;

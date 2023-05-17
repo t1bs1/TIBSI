@@ -82,6 +82,13 @@ const Signup = () => {
 
   return (
     <Container>
+            <header>
+        <center>
+        <div className="our-values">
+              <h2><strong>Our </strong><span style={{ color: "#1d8cf8" }}><strong>Team</strong></span></h2>
+              </div>
+        </center>
+      </header>
       <div className="swiper-container">
         <div className="swiper-wrapper">
           {teamMembers.map((member, index) => (

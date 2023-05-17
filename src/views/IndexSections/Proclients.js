@@ -4,18 +4,18 @@ import { Container } from 'reactstrap';
 const sampleProjects = [
   { id: 1, 
     name: 'Donation Drive for student of Magdolinog Elem. School.', 
-    description: 'Donate School supplies to the elementary students of Magdolinog Elem. School Borbon Cebu.', 
+    description: 'Donate School supplies', 
     image: 'https://www.astro-foundation.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgtigz0nv%2Fimage%2Fupload%2Fv1669365535%2Fviber_image_2022_10_24_11_34_03_527_9213f160d3.jpg&w=3840&q=75' 
   },
   { id: 2, 
     name: 'Community Outreach at DepEd Cebu Province', 
-    description: 'The foundation donated bond paper to help teachers in DepEd Lapu-Lapu and Cebu Province print learning materials for distance learning during the pandemic, as they have limited funds.', 
+    description: 'The foundation donated bond paper to help teachers', 
     image: 'https://www.astro-foundation.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgtigz0nv%2Fimage%2Fupload%2Fv1666929320%2Fviber_image_2022_10_24_11_42_48_326_4e2578b849.jpg&w=3840&q=75' 
   },
   
   { id: 3, 
     name: 'Community Outreach - Typhoon Odette Victims', 
-    description: 'To distribute relief goods to families affected by the typhoon Odette in Borbon, Cebu.', 
+    description: 'To distribute relief goods', 
     image: 'https://www.astro-foundation.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgtigz0nv%2Fimage%2Fupload%2Fv1666929532%2Fviber_image_2022_08_05_10_29_13_438_2cec32bb5a.jpg&w=3840&q=75' 
   }
 ];
@@ -90,7 +90,7 @@ function Proclient() {
     <Container>
       <header>
         <center>
-        <h1><strong>Astro Charitable and Scholarship Foundation, Inc.</strong></h1>
+        <h1><strong>Projects</strong></h1>
         </center>
       </header>
         <ProjectList />

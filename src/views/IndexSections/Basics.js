@@ -35,9 +35,9 @@ export default function Basics() {
       <Container>
         <h2 className="title">WHO WE ARE</h2> 
         <Container>
-          <Row className="justify-content-between">
+          <Row>
             <Col className="mb-5 mb-lg-0" lg="5">
-            <h3 className="des" style={{textAlign: "justify"}}><b>TIBSI• The Investream Business Solutions Inc.</b>(hereinafter referred to as "TIBSI") was founded and incoporated in <b>(Input Date Here.)</b> Investream Business Solutions Inc. is a business consulting firm that specializes in providing innovative solutions to help businesses streamline their operations and increase their efficiency. </h3>
+            <h3 className="des" style={{textAlign: "justify"}}><b>TIBSI• The Investream Business Solutions Inc.</b> is a company that was established and incorporated on a specific date (please provide the date). It operates as a business consulting firm with a primary focus on delivering creative and effective solutions to assist businesses in optimizing their operations and enhancing overall efficiency. TIBSI offers its expertise and knowledge to various companies across different industries.</h3>
             </Col>
             <Col lg="6">
               <UncontrolledCarousel
